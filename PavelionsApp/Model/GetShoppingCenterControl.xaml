@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="PavelionsApp.Model.GetShoppingCenterControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PavelionsApp.Model"
+             mc:Ignorable="d" 
+             Loaded="loadComponent"
+             d:DesignHeight="450" d:DesignWidth="250">
+    <Border Grid.Column="1" CornerRadius="15 0 0 35" 
+        BorderThickness="5" Background="#23232e">
+            <StackPanel Orientation="Vertical">
+                <Border  CornerRadius="5" 
+             Background="Transparent" BorderThickness="5" 
+             VerticalAlignment="Top"
+             BorderBrush="#454550" Height="100" Width="150"
+             HorizontalAlignment="Center"
+             Margin="5 20 5 0">
+                    <Image x:Name="image" Stretch="Fill"/>
+                </Border>
+                <TextBlock x:Name="ScName" Foreground="White" FontSize="17" Margin="20 5 5 0" TextWrapping="Wrap"/>
+                <TextBlock x:Name="ScCity" Foreground="White" FontSize="10" Margin="20 5 5 0" TextWrapping="Wrap"/>
+            <TextBlock x:Name="ScStatus" Foreground="White" FontSize="10" Margin="20 5 5 0" TextWrapping="Wrap"/>
+            <TextBlock x:Name="ScCast" Foreground="White" FontSize="10" Margin="20 5 5 0" TextWrapping="Wrap"/>
+            <TextBlock x:Name="ScCountPav" Foreground="White" FontSize="10" Margin="20 5 5 0" TextWrapping="Wrap"/>
+            <TextBlock x:Name="ScAdded" Foreground="White" FontSize="10" Margin="20 5 5 0" TextWrapping="Wrap"/>
+            <TextBlock x:Name="ScFloors" Foreground="White" FontSize="10" Margin="20 5 5 0" TextWrapping="Wrap"/>
+                <Button Style="{StaticResource DeleteButton}" Content="Удалить" Click="btnDelete_Click"/>
+                <Button Style="{StaticResource ControlButton}" Content="Редактировать тц" Margin="0 10 0 0" Click="btnEdit_Click"/>
+            </StackPanel>
+        </Border>
+</UserControl>

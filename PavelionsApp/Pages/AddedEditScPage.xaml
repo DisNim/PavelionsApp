@@ -1,0 +1,32 @@
+﻿<Page x:Class="PavelionsApp.Pages.AddedEditScPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PavelionsApp.Pages"
+      mc:Ignorable="d" 
+      Loaded="loadPage"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddedEditPage">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Border CornerRadius="5" BorderBrush="DarkGray" BorderThickness="2" Margin="0 5 0 5" Width="300">
+            <StackPanel Orientation="Vertical" Margin="0 10 0 10">
+                <TextBox Style="{StaticResource txtEnter}"
+                     Tag="Введите название тц" x:Name="scName"  Padding="5 0 0 0"/>
+                <TextBox Style="{StaticResource txtEnter}" Height="19"
+                     Tag="Введите город" x:Name="scCity"   Padding="5 0 0 0"/>
+                <TextBox Style="{StaticResource txtEnter}"
+                Tag="Введите статус тц" x:Name="scStatus"   Padding="5 0 0 0"/>
+                <TextBox Style="{StaticResource txtEnter}"
+                 Tag="Введите коэф. доб. стоимости" x:Name="scAdded"  Padding="5 0 0 0"/>
+                <TextBox Style="{StaticResource txtEnter}"
+                 Tag="Введите стоимость постройки" x:Name="scCost"  Padding="5 0 0 0"/>
+                <TextBox Style="{StaticResource txtEnter}"
+                 Tag="Введите кол. этажей" x:Name="scFloors"  Padding="5 0 0 0"/>
+                <Button x:Name="addBtn" Style="{StaticResource ControlButton}" Margin="0 20 0 0"
+                    Click="btnControl_Click"/>
+                <TextBlock Foreground="Red" FontSize="15" x:Name="errorTxt" Margin="0 20 0 0" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+    </ScrollViewer>
+</Page>

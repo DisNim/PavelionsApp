@@ -1,0 +1,31 @@
+﻿<Page x:Class="PavelionsApp.Pages.AddEmployeesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PavelionsApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEmployeesPage">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <Border CornerRadius="5" BorderThickness="2" BorderBrush="DarkGray" Width="300" Margin="0 5 0 5">
+            <StackPanel Orientation="Vertical">
+                <TextBox Style="{StaticResource txtEnter}" Tag="Логин" Padding="5 0 0 0" x:Name="login"/>
+                <TextBox Style="{StaticResource txtEnter}" Tag="Пароль" Padding="5 0 0 0" x:Name="pas" PreviewTextInput="ChangePreviewText"
+                         TextChanged="TextIsEmpty"/>
+                <TextBox Style="{StaticResource txtEnter}" Tag="Введите ФИО сотрудника" Padding="5 0 0 0" x:Name="employeesData"/>
+                <TextBox Style="{StaticResource txtEnter}" Tag="Введите должность сотрудника" Padding="5 0 0 0" x:Name="role"/>
+                <TextBox Style="{StaticResource txtEnter}" Tag="Введите телефон" Padding="5 0 0 0" x:Name="phone"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0" Width="150">
+                    <RadioButton Content="М" Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0 0 17 0"
+                                 GroupName="Gender" x:Name="men"/>
+                    <RadioButton Content="Ж" Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="17 0 0 0"
+                                 GroupName="Gender" x:Name="wom"/>
+                </StackPanel>
+                <Button Style="{StaticResource ControlButton}" Content="Добавить" Margin="0 20 0 0" Click="btnGender_Click"/>
+                <TextBlock x:Name="errorTxt" FontSize="15" HorizontalAlignment="Center" Margin="0 15 0 0" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+    </ScrollViewer>
+</Page>

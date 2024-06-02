@@ -1,0 +1,18 @@
+﻿<Application x:Class="PavelionsApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PavelionsApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionary/MenuButtonDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionary/OptionButtonDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionary/WindowOptionButtonDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionary/TextBoxDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionary/ContentBorderDictionary.xaml"/>
+            
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
